@@ -1,0 +1,72 @@
+using System;
+
+namespace Deliverable11
+
+
+
+{
+    public class Myclass {
+
+        private static void Main(string[] args)
+        {
+            //string username, password;
+
+
+
+
+            //Console.Write("Input a username: ");
+            //username = Console.ReadLine();
+
+           // Console.Write("Input a password: ");
+           // password = Console.ReadLine();
+
+
+
+            static bool password(string input, int minimum)
+            {
+                bool hasCap = false;
+                bool hasLow = false;
+                bool hasSpec = false;
+                char currentCharacter;
+
+                if (!(input.Length >minimum))
+                {
+                    return false;
+
+                }
+
+                for (int i = 0; i < input.Length; i++)
+                {
+                    currentCharacter = input[i];
+                    if (char.IsUpper(currentCharacter))
+                    {
+                        hasCap = true;
+                    }
+                    else if (char.IsLower(currentCharacter))
+                    {
+                        hasLow = true;
+                    }
+                    else if (!char.IsLetterOrDigit(currentCharacter))
+                    {
+                        hasSpec = true;
+                    }
+
+                    if ( hasCap && hasLow && hasSpec)
+                    
+                        return true;
+
+                    string username, password;
+
+
+
+
+                    Console.Write("Input a username: ");
+                    username = Console.ReadLine();
+
+                    Console.Write("Input a password: ");
+                    password = Console.ReadLine();
+                }
+                }
+            }
+        }
+    }
