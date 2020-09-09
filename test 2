@@ -1,0 +1,87 @@
+using System;
+
+namespace Deliverable11
+
+
+
+{
+    public MainClass
+
+        
+    {
+
+        private static void Main(string[] args)
+    {
+        string username, passwordInput;
+        Console.Write("Input a username: ");
+        username = Console.ReadLine();
+
+
+
+        Console.Write("Input a password: ");
+        passwordInput = Console.ReadLine();
+
+        bool passwordResult = passwordInput(passwordInput, 5);
+        if (passwordResult == false)
+        {
+            Console.Write("\nError\n\n");
+        }
+        else
+        {
+            Console.Write("\nSuccess\n\n")
+
+        }
+
+    }
+            static bool password(string input, int minimum)
+            {
+                bool hasCap = false;
+                bool hasLow = false;
+                bool hasSpec = false;
+                char currentCharacter;
+
+                if (!(input.Length > minimum))
+                {
+                    return false;
+
+                }
+
+                for (int i = 0; i < input.Length; i++)
+                {
+                    currentCharacter = input[i];
+                if (char.IsUpper(currentCharacter))
+                {
+                    hasCap = true;
+                }
+                else if (char.IsLower(currentCharacter))
+                {
+                    hasLow = true;
+                }
+                else if (!char.IsLetterOrDigit(currentCharacter))
+                {
+                    hasSpec = true;
+                }
+
+                    if (hasCap && hasLow && hasSpec)
+
+                        return true;
+
+                //string username, password;
+
+                
+
+                //Console.Write("Input a username: ");
+                //username = Console.ReadLine();
+
+                //Console.Write("Input a password: ");
+                //password = Console.ReadLine();
+
+
+            }
+                return false;
+            
+
+        }
+        
+    }
+}
